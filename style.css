@@ -1,0 +1,171 @@
+:root{
+
+
+    --VeryDarkMagenta:hsl(300,43%,22%);
+--SoftPink:hsl(333, 80%, 67%);
+
+--DarkGrayishMagenta:hsl(303,10%,53%);
+--LightGrayishMagenta:hsl(300,24%,96%);
+--White:hsl(0,0%,100%);
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+min-height: 100vh;
+justify-content: center;
+align-items: center;
+font-size: 15px;
+font-family: "League Spartan";
+background-image: url("images/bg-pattern-top-desktop.svg"),url("images/bg-pattern-bottom-desktop.svg");
+background-repeat: no-repeat,no-repeat;
+background-position: top left,bottom right;
+/* background-size: 80%; */
+background-size:contain;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    /* max-width: 37rem; */
+    max-width: 80%;
+
+}
+.card1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--VeryDarkMagenta);
+
+}
+.card1__divLeft{
+    width: 35%;
+    h1{
+        font-size: xxx-large;
+    }
+    
+
+}
+.card1__divRight{
+
+    display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        justify-content: center;
+  /* padding-left: 43px; */
+}
+.card1__divRight__RatingMain{
+    background-color:var(--LightGrayishMagenta);
+    padding: 1rem;
+    margin: .5rem;
+    display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        /* width: 100%; */
+        max-width: fit-content;/*in order for the content to be almsot the same size since width=100%* is a lotta trouble ngl*/
+        border-radius: .5rem;
+    strong{
+   /* float: right;      */
+    }
+    
+}
+.card1__divRight__RatingMain:nth-child(2){
+    margin-left: 4rem;
+}
+.card1__divRight__RatingMain:nth-child(3){
+    margin-left: 8rem;
+}
+.card1__divRight__RatingMain__5starsMain{
+    display: flex;
+    justify-content:space-between;
+padding-right: 2rem;
+width: 50%;
+
+}
+.card1__divRight__RatingMain__5starsMain__Star{
+
+}
+.card2{
+    display: flex;
+    flex-direction: row;
+
+}
+.card2__CustomerReview{
+    max-width: 34%;
+    height: max-content;
+    margin: 1rem;
+    background-color: var(--VeryDarkMagenta);
+    color:var(--White);
+    padding: 2rem;
+    border-radius:.5rem;
+    
+
+}
+.card2__CustomerReview:nth-child(2){
+    margin-top: 2rem;
+}
+.card2__CustomerReview:nth-child(3){
+    margin-top: 4rem;
+}
+.card2__CustomerReview__DetailsMain{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0rem;
+    align-items:center;
+    img{
+        clip-path: circle();
+        height: 64px;
+        width: 64px;
+    }
+    strong,p{
+      margin: auto;  
+    }
+    p{
+        color: var(--SoftPink);
+    }
+}
+.card2__CustomerReview__DetailsMain__Details{
+padding-left:1rem;
+}
+
+@media (max-width:764px) {
+    body{
+        background-image:url("images/bg-pattern-top-mobile.svg"),url("images/bg-pattern-bottom-mobile.svg");
+        background-position:top left,right bottom;
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+    .card1,.card2{
+        flex-direction: column;
+    }
+    .card1__divLeft{
+        width: auto;
+        h1,p{
+            text-align: center;
+        }
+    }
+    .card1__divRight__RatingMain{
+        margin: .5rem 0;
+        flex-direction: column;
+        /* width: 100%; */
+        width: 90%;
+        max-width:none;
+    }
+    .card1__divRight__RatingMain:nth-child(2),.card1__divRight__RatingMain:nth-child(3){
+        margin-left: auto;
+    }
+    .card1__divRight__RatingMain__5starsMain{
+        padding-right: 0;
+    }
+    .card1__divRight__RatingMain{
+        display: flex;
+        
+        strong{
+            /* margin: auto; */
+            margin: 1rem 0rem 0rem 0rem;
+        }
+    }
+    .card2__CustomerReview{
+        max-width:none;
+    }
+}
