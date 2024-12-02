@@ -128,6 +128,25 @@ width: 50%;
 padding-left:1rem;
 }
 
+ .card2__CustomerReview:hover{
+        transition: all .3s;
+        /* max-width: 40%; */
+        background-color:var(--SoftPink);
+ 
+    }
+.card1__divLeft{
+    h1:hover{
+        transition: all .3s;
+        color:var(--SoftPink);
+    }
+}
+.card1__divRight__RatingMain {
+    strong:hover {
+        transition: all .3s;
+        color:var(--SoftPink);
+    }
+}
+
 @media (max-width:764px) {
     body{
         background-image:url("images/bg-pattern-top-mobile.svg"),url("images/bg-pattern-bottom-mobile.svg");
@@ -168,4 +187,5 @@ padding-left:1rem;
     .card2__CustomerReview{
         max-width:none;
     }
+   
 }
